@@ -5,27 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Links</title>
     <style>
+        .links{
+            text-align: center;
+        }
         input {
-            /* visibility: hidden; */
+            display: none;
+        }
+        button {
+            width: 100px;
+            height: 30px;
+            margin-top: 10px;
+            color: white;
+            font-weight: bold;
+            border: none;
+            border-radius: 2px;
+            background: linear-gradient(180deg, rgba(85,20,28,1) 0%, rgba(208,22,22,1) 100%);
         }
     </style>
 
 </head>
 <body>
-    <div class="header">
-        <h1 class="logo">
-            <img src="icon.png" alt="red prism" class="logo-icon">
-        </h1>
-    </div>
     <div class="links">
-        <input id="linkedinInput" value="https://www.linkedin.com/in/renatamiriuk/">
-        <button id="linkedin">linkedin</button>
-
-        <input id="githubInput" value="https://github.com/rmiri">
-        <button id="github">Github</button>
-
-        <input id="mediumInput" value="https://medium.com/@r.miriuk">
+        <img src="icon.png" alt="red prism" class="logo-icon">
+        <button id="linkedin">Linkedin</button>
         <button id="medium">Medium</button>
+        <button id="github">Github</button>
+        <p id="message"></p>
+        <input id="linkedinInput" value="https://www.linkedin.com/in/renatamiriuk/">
+        <input id="githubInput" value="https://github.com/rmiri">
+        <input id="mediumInput" value="https://medium.com/@r.miriuk">
+
     </div>
     <script src="popup.js"></script>
 </body>

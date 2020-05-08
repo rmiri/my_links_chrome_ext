@@ -8,17 +8,16 @@ var githubInput = document.getElementById('githubInput')
 var medium = document.getElementById('medium');
 var mediumInput = document.getElementById('mediumInput');
 
+var message = document.getElementById('message')
 
 const copyThis = (input) => {
-    // input.select();
-    // document.execCommand("copy");
     const el = document.createElement('textarea');
     el.value = input.value;
     document.body.appendChild(el);
     el.select();
     document.execCommand('copy');
-    alert("Copied the text: " + el.value);
     document.body.removeChild(el);
+    message.innerText = "Copied"
 }
 
 
@@ -27,7 +26,7 @@ linkedin.addEventListener("click", () => copyThis(linkedinInput));
 medium.addEventListener("click", () => copyThis(mediumInput));
 
 linkedinInput.onchange = function(){
-    linkedinInput.innerText = linkedinInput.value
+    alert(linkedinInput.value)
 }
 
 
