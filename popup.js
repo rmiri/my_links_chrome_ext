@@ -1,12 +1,23 @@
 
-var linkTo = document.getElementById('link');
-var theInput = document.getElementById('theInput')
+var linkedin = document.getElementById('linkedin');
+var linkedinInput = document.getElementById('linkedinInput')
 
-linkTo.onclick = function() {
-theInput.select();
-document.execCommand("copy");
+var github = document.getElementById('github');
+var githubInput = document.getElementById('githubInput')
 
+var medium = document.getElementById('medium');
+var mediumInput = document.getElementById('mediumInput');
+
+
+const copyThis = (theInput) => {
+    theInput.select();
+    document.execCommand("copy");
 }
+
+
+linkedin.onclick = copyThis(linkedinInput);
+medium.onclick = copyThis(mediumInput);
+github.onclick = copyThis(githubInput);
 
 
 
