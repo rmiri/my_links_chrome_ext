@@ -9,17 +9,26 @@ var medium = document.getElementById('medium');
 var mediumInput = document.getElementById('mediumInput');
 
 
-const copyThis = (theInput) => {
-    theInput.select();
-    document.execCommand("copy");
+const copyThis = (input) => {
+    // input.select();
+    // document.execCommand("copy");
+    const el = document.createElement('textarea');
+    el.value = input.value;
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    alert("Copied the text: " + el.value);
+    document.body.removeChild(el);
 }
 
 
-linkedin.onclick = copyThis(linkedinInput);
-medium.onclick = copyThis(mediumInput);
-github.onclick = copyThis(githubInput);
+github.addEventListener("click", () => copyThis(githubInput));
+linkedin.addEventListener("click", () => copyThis(linkedinInput));
+medium.addEventListener("click", () => copyThis(mediumInput));
 
-
+linkedinInput.onchange = function(){
+    linkedinInput.innerText = linkedinInput.value
+}
 
 
 
