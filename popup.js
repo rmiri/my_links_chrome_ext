@@ -1,14 +1,14 @@
 
-var linkedin = document.getElementById('linkedin');
-var linkedinInput = document.getElementById('linkedinInput')
+const linkedin = document.getElementById('linkedin');
+const linkedinInput = document.getElementById('linkedinInput')
 
-var github = document.getElementById('github');
-var githubInput = document.getElementById('githubInput')
+const github = document.getElementById('github');
+const githubInput = document.getElementById('githubInput')
 
-var medium = document.getElementById('medium');
-var mediumInput = document.getElementById('mediumInput');
+const medium = document.getElementById('medium');
+const mediumInput = document.getElementById('mediumInput');
 
-var message = document.getElementById('message')
+const message = document.getElementById('message')
 
 const copyThis = (input) => {
     const el = document.createElement('textarea');
@@ -17,7 +17,7 @@ const copyThis = (input) => {
     el.select();
     document.execCommand('copy');
     document.body.removeChild(el);
-    message.innerText = "Copied"
+    message.innerText = `Copied ${input.value}`
 }
 
 

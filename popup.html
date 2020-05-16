@@ -5,36 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easy Links</title>
     <style>
+        body{
+            background-color: #292a2d;
+        }
         .links{
             text-align: center;
+            float: left;
+            width: 100px;
+            padding-left: 10px;
         }
         input {
             display: none;
         }
-        button {
-            width: 100px;
-            height: 30px;
+        #message{
+            max-width: 100px;
+            color: azure;
+        }
+        .icons{
+            width: 40px;
             margin-top: 10px;
-            color: white;
-            font-weight: bold;
-            border: none;
-            border-radius: 2px;
-            background: linear-gradient(180deg, rgba(85,20,28,1) 0%, rgba(208,22,22,1) 100%);
+            margin-right: 5px;
         }
     </style>
 
 </head>
 <body>
     <div class="links">
-        <img src="icon.png" alt="red prism" class="logo-icon">
-        <button id="linkedin">Linkedin</button>
-        <button id="medium">Medium</button>
-        <button id="github">Github</button>
+        <img src="iconSimplified.ico" alt="red prism" class="logo-icon">
+        <a id="linkedin"><img src="images/linkedinIcon.png" class="icons"></a>
+        <a id="medium"><img src="images/medium.png" class="icons"></a>
+        <a id="github"><img src="images/github.png" class="icons"></a>
+        <a id="twitter"><img src="images/twitter.png" class="icons"></a>
         <p id="message"></p>
         <input id="linkedinInput" value="https://www.linkedin.com/in/renatamiriuk/">
         <input id="githubInput" value="https://github.com/rmiri">
         <input id="mediumInput" value="https://medium.com/@r.miriuk">
-
+        <input id="twitterInput" value="https://medium.com/@r.miriuk">
     </div>
     <script src="popup.js"></script>
 </body>
